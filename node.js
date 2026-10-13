@@ -3,7 +3,7 @@ import http from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
-import {api,MAX_BODY} from '../api.js';
+import {api,MAX_BODY} from './api.js';
 import {MemoryStore} from './memory-store.js';
 const root=fileURLToPath(new URL('../public/',import.meta.url));
 export function makeServer(store=new MemoryStore()){
